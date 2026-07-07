@@ -1,9 +1,5 @@
-from typing import TypeVar
-
 from pydantic import BaseModel
 from sqlmodel import SQLModel
-
-T = TypeVar("T", bound=SQLModel)
 
 
 class PaginatedResponse[T: SQLModel](BaseModel):

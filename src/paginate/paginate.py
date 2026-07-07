@@ -1,18 +1,18 @@
 import math
 
 from sqlalchemy import func
-from sqlmodel import Session, select
+from sqlmodel import Session, SQLModel, select
 from sqlmodel.sql.expression import SelectOfScalar
 
 from paginate.page_params import PageParams
 from paginate.paginated_response import PaginatedResponse
 
 
-def paginate(
+def paginate[T: SQLModel](
     session: Session,
-    statement: SelectOfScalar,
+    statement: SelectOfScalar[T],
     params: PageParams,
-) -> PaginatedResponse:
+) -> PaginatedResponse[T]:
     """
     Paginates any SQLModel select() statement.
 
