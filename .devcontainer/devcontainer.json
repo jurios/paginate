@@ -19,7 +19,7 @@
       }
     }
   },
-  //"postCreateCommand": "uv sync",
+  "postCreateCommand": "uv sync",
   "containerUser": "developer",
   "remoteUser": "developer"
 }
