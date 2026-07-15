@@ -1,8 +1,7 @@
 from pydantic import BaseModel
-from sqlmodel import SQLModel
 
 
-class PaginatedResponse[T: SQLModel](BaseModel):
+class PaginatedResponse[T](BaseModel):
     """Generic paginated response wrapper. Works with any SQLModel schema."""
 
     data: list[T]  # Items for the current page
