@@ -1,10 +1,3 @@
-"""Fixture `backend`, parametrizado por ORM.
-
-Cada test se ejecuta dos veces (SQLAlchemy y SQLModel). Los modelos y el
-dataclass Backend viven en `factories.py`, NO aquí, para no importar desde
-conftest desde los módulos de test.
-"""
-
 from __future__ import annotations
 
 from collections.abc import Iterator
