@@ -1,11 +1,16 @@
+from __future__ import annotations
+
 import math
+from typing import TYPE_CHECKING
 
 from sqlalchemy import Select, func, select
 from sqlalchemy.orm import Session
-from sqlmodel.sql.expression import SelectOfScalar
 
 from paginate.page_params import PageParams
 from paginate.paginated_response import PaginatedResponse
+
+if TYPE_CHECKING:
+    from sqlmodel.sql.expression import SelectOfScalar
 
 
 def paginate[T](
